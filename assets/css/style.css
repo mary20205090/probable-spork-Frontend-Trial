@@ -1,0 +1,110 @@
+body {
+    font-family: "Lato", sans-serif;
+
+    /* background-color: blue!important */
+
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#18206F;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    
+  }
+  
+  /* card */
+  .card{
+      background-color: #576CA8;
+      color: white!important;
+  }
+  .card-subtitle{
+      color: white;
+      padding-bottom: 30px;
+  }
+  .card1 .btn1{
+    color: white!important;
+    background-color:#18206F;
+    border-radius: 2px;
+
+    padding: 5px 10px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+
+  }
+  .card1 .container{
+    padding-top: 30px;
+  }
+  .container .btn2{
+
+    color: white!important;
+    background-color:#18206F;
+    border-radius: 2px;
+
+    padding: 5px 10px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+
+  }
+  .sent .card2{
+    background-color: #FF4000;
+    color: white!important;
+
+
+  }
+  .received .now{
+    background-color: #FF4000;
+    color: white!important;
+ 
+
+  }
+  .received .des{
+    background-color:#18206F;
+    color: white!important;
+
+  }
+  .received{
+    padding-top: 30px;
+  }
+.container span{
+  background-color:#18206F;
+  color: #f1f1f1;
+
+
+}
