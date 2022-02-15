@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/1e738169f6.js" crossorigin="anonymous"></script> 
+        <!--linking to css i.e boostrap css  -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">   
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+         rel="stylesheet">
+        <!-- google fonts -->
+         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+         <!--boxicons  -->
+         <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+         <!-- custom css -->
+         <link rel="stylesheet" href="assets/css/style.css">
+         <!-- main.js -->
+         <!-- <script type="text/javascript" src="main.js"></script> -->
+        <script src="assets/js/jquery-3.6.0.min.js"> </script>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <!-- section one starts -->
+
+    <div class="row align-items-center">
+        <div class="col">
+
+        <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Test Account</a>
+        <a href="parcel.html">New parcel</a>
+        <a href="sent_parcels.html">Sent Parcels</a>
+
+        </div>
+
+            
+        </div>
+        </div>
+    
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sent Parcels</span>
+<!-- section one  ends -->
+</div>
+<!-- section  two starts -->
+<section class="sent container py-4">
+    <!-- First Card Starts -->
+       <div class="row">
+        
+   
+         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 ">
+           <div class="card">
+      
+             <div class="card-body">
+               <h5 class="card-title">Total</h5>
+               <small class="total"></small>
+               
+             </div>
+           </div>
+   
+         </div>
+       
+      
+         <!-- End Of The First card  -->
+   <!-- Second Card Start -->
+         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" >
+   
+           <div class="card2">
+             <div class="card-body">
+               <h5 class="card-title">Unsyc </h5>
+               <small class="total"></small>
+   
+               
+             </div>
+           </div>
+   
+         </div>
+   
+         <!-- End of the Second Card -->
+   
+        
+  <!-- section two ends -->
+  <!-- third section starts -->
+  <div class=" received container" id="sent">
+   
+  </div>
+
+  <!-- third section ends -->
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
+$( document ).ready(function() {
+    keys = Object.keys(localStorage)
+    total = 0;
+    keys.map(key => {
+         const obj=JSON.parse(localStorage[key])
+         total +=( parseInt( obj.amount))
+         $('#sent').append(`
+         <div class='row'>
+         <div class='col-1 now'>${ obj.amount}<br>${obj.vehicle} </div>
+         <div class='col-5 des'>${obj.description}<br>${obj.destination}<br> ${obj.sendername} <br> ${obj.receiptname}  <hr> </div>
+        </div>
+         
+         `)
+    } )
+    console.log(total);
+    $('.total').append(total);
+    
+});
+</script>
+
+   
+</body>
+</html> 
